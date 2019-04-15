@@ -1,2 +1,2 @@
 # Projet_TDG
-Projet Théorie des Graphes GNENAGO NEYRET SADOUN
+Projet Théorie Des Graphes GNENAGO NEYRET SADOUN
