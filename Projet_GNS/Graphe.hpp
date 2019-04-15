@@ -10,6 +10,7 @@
 #define Graphe_hpp
 #include <string>
 #include <unordered_map>
+#include <map>
 #include "Sommet.hpp"
 #include "Arete.hpp"
 
@@ -37,8 +38,8 @@ protected:
 
 private:
     /// Le rÈseau est constituÈ d'une collection de sommets
-    std::unordered_map<std::string,Sommet*> m_sommets;//stockÈe dans une map (clÈ=id du sommet, valeur= pointeur sur le sommet)
-    std::unordered_map<std::string,Arete*> m_aretes;
+    std::map<std::string,Sommet*> m_sommets;//stockÈe dans une map (clÈ=id du sommet, valeur= pointeur sur le sommet)
+    std::map<std::string,Arete*> m_aretes;
 
 };
 

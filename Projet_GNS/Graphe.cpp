@@ -48,19 +48,16 @@ void graphe::afficher() const{
 
     std::cout<<"   ordre : "<<m_sommets.size()<<std::endl;
 
+
     //pour chaque sommet:
 
-    auto it1 = m_sommets.begin();
-
-    //std::cout << it1->first;
-// Iterate over the map using iterator
-    while(it1 != m_sommets.end())
+for ( auto it1=m_sommets.begin(); it1!=m_sommets.end(); ++it1)
     {
         std::cout<<"   sommet : ";
         std::cout << it1->first;
         it1->second->afficherData();
         std::cout<<std::endl;
-        it1++;
+
     }
 
     std::cout<<"   taille : "<<m_aretes.size()<<std::endl;
