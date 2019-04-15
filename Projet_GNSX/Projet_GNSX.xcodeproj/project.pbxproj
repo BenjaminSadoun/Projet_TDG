@@ -70,9 +70,9 @@
 				EF21F6032264A487009E18CF /* Graphe.cpp */,
 				EF21F6042264A487009E18CF /* Graphe.hpp */,
 				EF21F6062264AB63009E18CF /* Sommet.cpp */,
-				EF21F6072264AB63009E18CF /* Sommet.hpp */,
 				EF21F6092264AFAF009E18CF /* Arete.cpp */,
 				EF21F60A2264AFAF009E18CF /* Arete.hpp */,
+				EF21F6072264AB63009E18CF /* Sommet.hpp */,
 			);
 			path = Projet_GNSX;
 			sourceTree = "<group>";
