@@ -12,8 +12,9 @@
 #include <stdio.h>
 #include <fstream>
 #include <iostream>
+
 #endif /* Arete_hpp */
-class Arete   {
+class Arete{
     
 private:
     
@@ -22,7 +23,13 @@ private:
     std::string m_sommet2;
     float m_poids1;
     float m_poids2;
+ 
 public:
+    
     Arete(std::string,std::string,std::string,float,float);
     ~Arete();
+    std::string getSommet1();
+    std::string getSommet2(); 
+    bool EstPlusPetitQue(Arete const& b) const ;
 };
+
