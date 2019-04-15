@@ -7,41 +7,76 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
-graphe::graphe(std::string FichierSommets,std::string FichierArets, std::string FichierPoid){
-    std::ifstream ifs{FichierSommets};
-    if (!ifs)
-        throw std::runtime_error( "Impossible d'ouvrir en lecture " + FichierSommets );
+graphe::graphe(std::string FichierSommetsAretes,std::string FichierPoidsAretes){
+    std::ifstream ifs1{FichierSommetsAretes};
+    if (!ifs1)
+        throw std::runtime_error( "Impossible d'ouvrir en lecture " + FichierSommetsAretes );
     int ordre;
-    ifs >> ordre;
-    if ( ifs.fail() )
+    ifs1 >> ordre;
+    if ( ifs1.fail() )
         throw std::runtime_error("Probleme lecture ordre du graphe");
-    std::string id;
+    std::string id_sommet;
     double x,y;
     //lecture des sommets
     for (int i=0; i<ordre; ++i){
-        ifs>>id; if(ifs.fail()) throw std::runtime_error("Probleme lecture donnÈes sommet");
-        ifs>>x; if(ifs.fail()) throw std::runtime_error("Probleme lecture donnÈes sommet");
-        ifs>>y; if(ifs.fail()) throw std::runtime_error("Probleme lecture donnÈes sommet");
-        m_sommets.insert({id,new Sommet{id,x,y}});
+        ifs1>>id_sommet; if(ifs1.fail()) throw std::runtime_error("Probleme lecture donnees sommet");
+        ifs1>>x; if(ifs1.fail()) throw std::runtime_error("Probleme lecture donnees sommet");
+        ifs1>>y; if(ifs1.fail()) throw std::runtime_error("Probleme lecture donnees sommet");
+        m_sommets.insert({id_sommet,new Sommet{id_sommet,x,y}});
     }
     int taille;
-    ifs >> taille;
-    if ( ifs.fail() )
+    ifs1 >> taille;
+    if ( ifs1.fail() )
         throw std::runtime_error("Probleme lecture taille du graphe");
-    std::string id_voisin;
+    std::string id_arete;
+    std::string id_sommet1, id_sommet2;
     //lecture des aretes
     for (int i=0; i<taille; ++i){
         //lecture des ids des deux extrÈmitÈs
-        ifs>>id; if(ifs.fail()) throw std::runtime_error("Probleme lecture arete sommet 1");
-        ifs>>id_voisin; if(ifs.fail()) throw std::runtime_error("Probleme lecture arete sommet 2");
+        ifs1>>id_arete; if(ifs1.fail()) throw std::runtime_error("Probleme lecture id arete");
+        ifs1>>id_sommet1; if(ifs1.fail()) throw std::runtime_error("Probleme lecture arete sommet 1");
+        ifs1>>id_sommet2; if(ifs1.fail()) throw std::runtime_error("Probleme lecture arete sommet 2");
+        m_aretes.insert({id_arete, new Arete{id_arete, id_sommet1, id_sommet2, 0, 0}});
+
         //ajouter chaque extrÈmitÈ ‡ la liste des voisins de l'autre (graphe non orientÈ)
-        (m_sommets.find(id))->second->ajouterVoisin((m_sommets.find(id_voisin))->second);
-        (m_sommets.find(id_voisin))->second->ajouterVoisin((m_sommets.find(id))->second);//remove si graphe orientÈ
+        //(m_sommets.find(id))->second->ajouterVoisin((m_sommets.find(id_voisin))->second);
+        //(m_sommets.find(id_voisin))->second->ajouterVoisin((m_sommets.find(id))->second);//remove si graphe orientÈ
     }
 }
 void graphe::afficher() const{
     std::cout<<"graphe : "<<std::endl;
-    std::cout<<"  coder l'affichage ! "<<std::endl;
+
+    std::cout<<"   ordre : "<<m_sommets.size()<<std::endl;
+
+    //pour chaque sommet:
+
+    auto it1 = m_sommets.begin();
+
+    //std::cout << it1->first;
+// Iterate over the map using iterator
+    while(it1 != m_sommets.end())
+    {
+        std::cout<<"   sommet : ";
+        std::cout << it1->first;
+        it1->second->afficherData();
+        std::cout<<std::endl;
+        it1++;
+    }
+
+    std::cout<<"   taille : "<<m_aretes.size()<<std::endl;
+
+
+    auto it2 = m_aretes.begin();
+
+    while(it2 != m_aretes.end())
+    {
+        std::cout<<"   arete : ";
+        it2->second->afficherData();
+        std::cout<<std::endl;
+        it2++;
+    }
+
+
 }
 
 void graphe::parcoursBFS(std::string id) const{

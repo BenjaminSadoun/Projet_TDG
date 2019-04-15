@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1555363330 source:c:\users\benji\onedrive\bureau\ece\informatique\theorie_des_graphes\projet_tdg\projet\projet_tdg\projet_gns\arete.cpp
+	"Arete.hpp"
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+
+1555363316 c:\users\benji\onedrive\bureau\ece\informatique\theorie_des_graphes\projet_tdg\projet\projet_tdg\projet_gns\arete.hpp
+	<stdio.h>
+	<fstream>
+	<iostream>
+
+1555363994 source:c:\users\benji\onedrive\bureau\ece\informatique\theorie_des_graphes\projet_tdg\projet\projet_tdg\projet_gns\graphe.cpp
+	<fstream>
+	<iostream>
+	"Graphe.hpp"
+	"Arete.hpp"
+	"Sommet.hpp"
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+
+1555361242 c:\users\benji\onedrive\bureau\ece\informatique\theorie_des_graphes\projet_tdg\projet\projet_tdg\projet_gns\graphe.hpp
+	<string>
+	<unordered_map>
+	"Sommet.hpp"
+	"Arete.hpp"
+
+1555361818 c:\users\benji\onedrive\bureau\ece\informatique\theorie_des_graphes\projet_tdg\projet\projet_tdg\projet_gns\sommet.hpp
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+
+1555363955 source:c:\users\benji\onedrive\bureau\ece\informatique\theorie_des_graphes\projet_tdg\projet\projet_tdg\projet_gns\main.cpp
+	<iostream>
+	"Graphe.hpp"
+	"Arete.hpp"
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+
+1555344909 source:c:\users\benji\onedrive\bureau\ece\informatique\theorie_des_graphes\projet_tdg\projet\projet_tdg\projet_gns\sommet.cpp
+	"Sommet.hpp"
+	<iostream>
+	<queue>
+	<stack>
+	<unordered_map>
+	<unordered_set>
+

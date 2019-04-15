@@ -1,5 +1,5 @@
-#ifndef SOMMET_H
-#define SOMMET_H
+#ifndef SOMMET_Hpp
+#define SOMMET_Hpp
 #include <string>
 #include <vector>
 #include <unordered_map>
@@ -22,17 +22,17 @@ public:
     ///renvoie la liste des ids des sommets de la composante
     std::unordered_set<std::string> rechercherCC() const;
     ~Sommet();
-    
+
 protected:
-    
+
 private:
     /// Voisinage : liste d'adjacence
     std::vector<const Sommet*> m_voisins;
-    
+
     /// DonnÈes spÈcifiques du sommet
     std::string m_id; // Identifiant
     double m_x, m_y; // Position
-    
+
 };
 
 #endif // SOMMET_H

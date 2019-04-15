@@ -12,11 +12,11 @@
 #include <stdio.h>
 #include <fstream>
 #include <iostream>
-#endif /* Arete_hpp */
+
 class Arete   {
-    
+
 private:
-    
+
     std::string m_indice;
     std::string m_sommet1;
     std::string m_sommet2;
@@ -24,5 +24,9 @@ private:
     float m_poids2;
 public:
     Arete(std::string,std::string,std::string,float,float);
+    Arete(std::string,std::string,std::string);
+    void afficherData() const;
     ~Arete();
 };
+
+#endif /* Arete_hpp */

@@ -9,8 +9,9 @@
 
 int main()
 {
-    std::cout << "Hello world!" << std::endl;
-    std::cout<<"grace";
-    
+    graphe test{"broadway.txt", "broadway_weights0.txt"};
+
+    test.afficher();
+
     return 0;
 }
