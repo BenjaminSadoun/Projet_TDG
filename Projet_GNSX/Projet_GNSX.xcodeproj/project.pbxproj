@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EF21F60222649FB1009E18CF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF21F60122649FB1009E18CF /* main.cpp */; };
+		EF21F6052264A487009E18CF /* Graphe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF21F6032264A487009E18CF /* Graphe.cpp */; };
+		EF21F6082264AB63009E18CF /* Sommet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF21F6062264AB63009E18CF /* Sommet.cpp */; };
+		EF21F60B2264AFAF009E18CF /* Arete.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF21F6092264AFAF009E18CF /* Arete.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		EF21F5F722649F9D009E18CF /* Projet_GNSX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Projet_GNSX; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF21F60122649FB1009E18CF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../Projet_GNS/main.cpp; sourceTree = "<group>"; };
+		EF21F6032264A487009E18CF /* Graphe.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Graphe.cpp; path = ../../Projet_GNS/Graphe.cpp; sourceTree = "<group>"; };
+		EF21F6042264A487009E18CF /* Graphe.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Graphe.hpp; path = ../../Projet_GNS/Graphe.hpp; sourceTree = "<group>"; };
+		EF21F6062264AB63009E18CF /* Sommet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Sommet.cpp; path = ../../Projet_GNS/Sommet.cpp; sourceTree = "<group>"; };
+		EF21F6072264AB63009E18CF /* Sommet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Sommet.hpp; path = ../../Projet_GNS/Sommet.hpp; sourceTree = "<group>"; };
+		EF21F6092264AFAF009E18CF /* Arete.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Arete.cpp; path = ../../Projet_GNS/Arete.cpp; sourceTree = "<group>"; };
+		EF21F60A2264AFAF009E18CF /* Arete.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Arete.hpp; path = ../../Projet_GNS/Arete.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				EF21F60122649FB1009E18CF /* main.cpp */,
+				EF21F6032264A487009E18CF /* Graphe.cpp */,
+				EF21F6042264A487009E18CF /* Graphe.hpp */,
+				EF21F6062264AB63009E18CF /* Sommet.cpp */,
+				EF21F6072264AB63009E18CF /* Sommet.hpp */,
+				EF21F6092264AFAF009E18CF /* Arete.cpp */,
+				EF21F60A2264AFAF009E18CF /* Arete.hpp */,
 			);
 			path = Projet_GNSX;
 			sourceTree = "<group>";
@@ -118,7 +133,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF21F6052264A487009E18CF /* Graphe.cpp in Sources */,
+				EF21F6082264AB63009E18CF /* Sommet.cpp in Sources */,
 				EF21F60222649FB1009E18CF /* main.cpp in Sources */,
+				EF21F60B2264AFAF009E18CF /* Arete.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
