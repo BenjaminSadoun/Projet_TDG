@@ -11,13 +11,15 @@
 #include <string>
 #include <unordered_map>
 #include "Sommet.hpp"
-
+#include "Arete.hpp"
+#include <string>
+#include <vector>
 class graphe
 {
 public:
     ///constructeur qui charge le graphe en mÈmoire
     //format du fichier ordre/liste des sommets/taille/liste des arÍtes
-    graphe(std::string,std::string, std::string);
+    graphe(std::string,std::string);
     ~graphe();
     void afficher() const;
     ///lance un parcours en largeur ‡ partir du sommet d'identifiant id
@@ -31,12 +33,14 @@ public:
     ///recherche et affiche les composantes connexes
     ///retourne le nombre de composantes connexes
     int rechercher_afficherToutesCC() const;
+    std::vector<Arete*> kruskal(std::vector<Arete*>) const;
     
 protected:
     
 private:
     /// Le rÈseau est constituÈ d'une collection de sommets
     std::unordered_map<std::string,Sommet*> m_sommets;//stockÈe dans une map (clÈ=id du sommet, valeur= pointeur sur le sommet)
+    std::vector<Arete*> m_Aretes;
     
 };
 
