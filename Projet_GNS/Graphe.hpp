@@ -40,6 +40,7 @@ private:
     /// Le rÈseau est constituÈ d'une collection de sommets
     std::map<std::string,Sommet*> m_sommets;//stockÈe dans une map (clÈ=id du sommet, valeur= pointeur sur le sommet)
     std::map<std::string,Arete*> m_aretes;
+    std::map<std::string,Arete*> m_aretes_ponderees;
 
 };
 

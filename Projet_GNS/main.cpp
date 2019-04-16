@@ -9,7 +9,7 @@
 
 int main()
 {
-    graphe test{"broadway.txt", "broadway_weights0.txt"};
+    graphe test{"broadway.txt", "broadway_weights_0.txt"};
 
     test.afficher();
 

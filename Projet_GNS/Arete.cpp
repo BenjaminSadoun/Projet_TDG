@@ -25,5 +25,5 @@ Arete::~Arete()
 
 void Arete::afficherData() const
 {
-    std::cout<<"    "<<m_indice<<" : "<<"(sommet1,sommet2)=("<<m_sommet1<<","<<m_sommet2<<")"<<std::endl;
+    std::cout<<"    "<<m_indice<<" : "<<"(sommet1,sommet2,poids1,poids2)=("<<m_sommet1<<","<<m_sommet2<<","<<m_poids1<<","<<m_poids2<<")"<<std::endl;
 }
