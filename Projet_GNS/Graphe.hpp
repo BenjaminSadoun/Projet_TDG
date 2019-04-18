@@ -10,10 +10,11 @@
 #define Graphe_hpp
 #include <string>
 #include <unordered_map>
+#include <map>
 #include "Sommet.hpp"
 #include "Arete.hpp"
-#include <string>
-#include <vector>
+#include "svgfile.h"
+
 class graphe
 {
 public:
@@ -23,26 +24,32 @@ public:
     ~graphe();
     void afficher() const;
     ///lance un parcours en largeur ‡ partir du sommet d'identifiant id
-    void parcoursBFS(std::string) const;
+    // void parcoursBFS(int) const;
     ///lance et affiche le parcours en largeur ‡ partir du sommet d'identifiant id
-    void afficherBFS(std::string) const;
+    // void afficherBFS(int) const;
     ///lance un parcours en profondeur ‡ partir du sommet d'identifiant id
-    void parcoursDFS(std::string) const;
+    //  void parcoursDFS(std::string) const;
     ///lance et affiche le parcours en profondeur ‡ partir du sommet d'identifiant id
-    void afficherDFS(std::string) const;
+    // void afficherDFS(std::string) const;
     ///recherche et affiche les composantes connexes
     ///retourne le nombre de composantes connexes
     int rechercher_afficherToutesCC() const;
-    std::vector<Arete*> kruskal(std::vector<Arete*>) const;
+    void dessinerSommets(Svgfile &svgout);
+    void dessinerArete(Svgfile &svgout);
+    std::vector<Arete*> kruskal(int);
+    void dessinerArete(Svgfile &svgout,std::vector<Arete*>);
+    std::vector<int> Dijkstra(int);
     
 protected:
     
 private:
     /// Le rÈseau est constituÈ d'une collection de sommets
-    std::unordered_map<std::string,Sommet*> m_sommets;//stockÈe dans une map (clÈ=id du sommet, valeur= pointeur sur le sommet)
-    std::vector<Arete*> m_Aretes;
+    ///std::map<std::string,Sommet*> m_sommets;
+    std::vector<Sommet*> m_sommetsB;
+    std::vector<Arete*> m_aretes;
     
 };
 
 
 #endif // Graphe_hpp
+

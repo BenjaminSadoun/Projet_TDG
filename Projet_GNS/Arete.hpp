@@ -5,30 +5,37 @@
 //  Created by pezi on 15/04/2019.
 //  Copyright © 2019 pezi. All rights reserved.
 //
-#include <stdio.h>
-#include <fstream>
-#include <iostream>
 
 #ifndef Arete_hpp
 #define Arete_hpp
 
+#include <stdio.h>
+#include <fstream>
+#include <iostream>
 
-class Arete {
+class Arete   {
     
 private:
     
-    std::string m_indice;
-    std::string m_sommet1;
-    std::string m_sommet2;
+    int m_indice;
+    int m_sommet1;
+    int m_sommet2;
     float m_poids1;
     float m_poids2;
- 
 public:
-    
-    Arete(std::string,std::string,std::string,float,float);
+    Arete(int,int,int,float,float);
+    Arete(int, int, int);
+    void afficherData() const;
     ~Arete();
-    std::string getSommet1();
-    std::string getSommet2(); 
-    bool EstPlusPetitQue(Arete const& b) const ;
+    int get_indice() const;
+    int getSommet1() const;
+    int getSommet2() const;
+    float getPoids1() const;
+    float getPoids2() const;
+    friend bool operator < (const Arete &a, const Arete &b);
+    friend bool operator > (const Arete &a, const Arete &b);
+    
 };
+
 #endif /* Arete_hpp */
+
